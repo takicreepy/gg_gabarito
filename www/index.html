@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <!-- meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' data: gap: 'unsafe-eval';style-src * 'self' 'unsafe-inline';connect-src * ;script-src * 'self' 'unsafe-inline';media-src *" -->
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />  
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="msapplication-tap-highlight" content="yes">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/Estilos.css">
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>    
+    <script type="text/javascript" src="js/jquery.min.js"></script>   
+<title>GG - Gabarito Escolar</title>
+</head>
+
+<body>
+<div id="tudo">
+
+    <!-- Cabeçalho -->
+	<div class="cabecalho">
+		<table border="0" width="100%" align="middle" cellpadding="0" cellspacing="0">
+			<tr valign="middle">
+				<td width="10%">
+					&nbsp;<img src='img/voltar4.png' height='40px' style='cursor:pointer' id='voltar' class='seta oculto'>
+				</td>
+				<td class="titulo" width="80%">
+					GG - Gabarito
+				</td>
+				<td width="10%">
+					<img src='img/sedf2.png' height='40px' class="sedf">
+				</td>				
+			</tr>
+		</table>
+	</div>    
+
+
+    <!-- Página Lista de Gabaritos -->
+    <div id="dvConteudo" class="dvConteudo oculto">
+    </div>
+
+    <!-- Página Detalhe de Gabarito -->
+    <div id="dvDetalhe" class="dvDetalhe oculto">
+    </div>
+
+    <!-- Registro Inicial no Sistema -->
+    <div id="inicial" class="inicial oculto">
+     	<table border="0" width="100%" align="middle" cellpadding="2" cellspacing="2">
+			<tr class="tabela_resposta_titulo_18">
+				<td align="middle" colspan="2" style="height:60px">Registro no Sistema</td>
+			</tr>     	
+            <tr class="tabela_resposta_corpo_10" style="height: 50px">
+                <td class="right">CPF:&nbsp;</td>
+                <td class="left">
+                	<input type="number" name="num_cpf" id="num_cpf" size="4" maxlength="14" placeholder="Somente números" value="">
+                </td>
+            </tr>
+            <tr class="tabela_resposta_corpo_10" style="height: 50px">
+                <td class="tabregistro right">Data Nascimento:&nbsp;</td>
+                <td class="tabregistro left">
+                	<input type="number" name="dat_nascimento" id="dat_nascimento" size="12" maxlength="9" placeholder="DDMMAAAA" value="">
+                </td>
+            </tr>
+            <tr><td colspan="2" class="tabregistro">&nbsp;</td></tr>
+            <tr style="height: 50px">
+                <td colspan="2" class="right">
+                	<input type="button" id="cmdPrivacidade" name="cmdPrivacidade" value="  Privacidade " class="botao_azul">
+                	&nbsp;&nbsp;&nbsp;                
+                	<input type="button" id="cmdLimpar" name="cmdLimpar" value="  Limpar " class="botao_azul">
+                	&nbsp;&nbsp;&nbsp;
+                    <input type="button" id="cmdRegistrar" name="cmdRegistrar" value="  Registrar  " class="botao_azul">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+            
+
+    <div id="divRodape" class="rodape oculto">
+        <canvas id="myChart" style="width:100%";></canvas>
+    </div>
+
+    <!-- Página Detalhe de Gabarito -->
+    <div id="dvPrivacidade" class="dvPrivacidade oculto">
+    	<br><br><br><br>
+		<b>Política de Privacidade</b>
+		<br><br>
+		Alexandre de Godoi Rodrigues criou o aplicativo GG Gabarito como aplicativo free. Este SERVIÇO é fornecido pelo desenvolvedor sem custo e é destinado para uso como está.
+		Esta página é usada para informar os visitantes sobre as políticas nossas de coleta, uso e divulgação de Informações pessoais, caso alguém decida usar o nosso serviço.
+		Se você optar por usar o nosso serviço, concordará com a coleta e uso de informações relacionadas a essa política. As informações pessoais coletadas por nós são usadas para fornecer e melhorar o serviço. Nós não usaremos nem compartilharemos suas informações com ninguém, exceto conforme descrito nesta Política de Privacidade.
+		Os termos usados nesta Política de Privacidade têm os mesmos significados que os nossos Termos e Condições, que podem ser acessados no aplicativo, a menos que definido de outra forma nesta Política de Privacidade.
+		<br>
+		<br>
+		<b>Coleta e Uso de Informações</b>
+		<br>
+		Para uma melhor experiência, ao usar nosso Serviço, nós podemos exigir que você nos forneça algumas informações pessoais identificáveis como o CPF e a data de nascimento. As informações que solicitamos será retido por nós e usados conforme descrito nesta política de privacidade.
+		O aplicativo não usa serviços de terceiros que podem coletar informações usadas para identificá-lo.
+		<br>
+		<br>
+		<b>Google Play Services</b>
+		<br>
+		Dados de Log
+		<br>
+		Nós queremos informá-lo de que sempre que você usar o nosso serviço, no caso de um erro no aplicativo coletamos dados e informações em seu telefone, chamados Dados do registro. Esses dados de registro podem incluir informações como endereço IP do dispositivo, endereço IP, nome do dispositivo, versão do sistema operacional, configuração do aplicativo, a hora e a data do seu uso do serviço e outras estatísticas.
+		<br>
+		<br>
+		<b>Cookies</b>
+		<br>
+		Cookies são arquivos com uma pequena quantidade de dados que são comumente usados como identificadores exclusivos anônimos. Estes são enviados para o seu navegador a partir dos sites que você visita e são armazenados na memória interna do seu dispositivo.
+		Nosso serviço não usa esses “cookies” explicitamente. No entanto, o aplicativo pode usar código de terceiros e bibliotecas que usam “cookies” para coletar informações para melhorar os serviços. Você tem a opção de aceitar ou recusar esses cookies e saber quando um cookie está sendo enviado para o seu dispositivo. Se você optar por recusar nossos cookies, talvez não consiga usar algumas partes deste Serviço.
+		<br>
+		<br>
+		<b>Provedores de serviço</b>
+		<br>
+		Nós podemos empregar empresas e indivíduos de terceiros devido às seguintes razões:
+		<br>
+		<ul>
+		<li>Para facilitar nosso serviço;</li>
+		<li>Para fornecer o serviço em nosso nome;</li>
+		<li>Para executar serviços relacionados ao aplicativo; ou</li>
+		<li>Para nos ajudar a analisar como nosso Serviço é usado.</li>
+		</ul>
+		Nós queremos informar aos usuários deste Serviço que esses terceiros têm acesso às suas Informações Pessoais. O motivo é executar as tarefas atribuídas a eles em nosso nome. No entanto, eles são obrigados a não divulgar ou usar as informações para qualquer outra finalidade.
+		<br>
+		<br>
+		<b>Segurança</b>
+		<br>
+		Nós valorizamos sua confiança ao nos fornecer suas Informações Pessoais, assim, estamos nos esforçando para usar meios comercialmente aceitáveis de protegê-los. Mas lembre-se de que nenhum método de transmissão pela Internet, ou método de armazenamento eletrônico é 100% seguro e confiável, e nós não podemos garantir sua segurança absoluta.
+		<br>
+		<br>
+		<b>Privacidade das crianças</b>
+		<br>
+		Estes Serviços não tratam ninguém com idade inferior a 13 anos. Nós não coletamos intencionalmente informações pessoalmente identificáveis de crianças menores de 13 anos. No caso de descobrirmos que uma criança com menos de 13 anos forneceu informações pessoais, nós excluímos imediatamente isso de nossos servidores. Se você é pai / mãe ou responsável legal e sabe que seu filho nos forneceu informações pessoais, entre em contato conosco para que possamos tomar as providências necessárias.
+		<br>
+		<br>
+		<b>Alterações a esta política de privacidade</b>
+		<br>
+		Nós podemos atualizar nossa Política de Privacidade de tempos em tempos. Assim, aconselhamos que você revise esta página periodicamente para quaisquer alterações. Nós iremos notificá-lo de quaisquer alterações publicando a nova Política de Privacidade nesta página. Essas alterações são efetivadas imediatamente após serem publicadas nesta página.
+		<br>
+		<br>
+		<b>Contate-Nos</b>
+		<br>
+		Se você tiver dúvidas ou sugestões sobre a nossa Política de Privacidade, não hesite em entrar em contato conosco pelo e-mail sac@baixacnpj.com.br.
+		<br>
+		<i>Esta página de política de privacidade foi criada em privacypolicytemplate.net e modificada pelo Desenvolvedor da Aplicação.</i>
+		<br>
+		<br>
+    </div>    
+
+</div>
+</body>
+</html>
